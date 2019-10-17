@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
   <body>
+    <p id="change"></p>
+    <br/>
+    <br/>
+    <p id="change2"></p>
     <script>
       var site = prompt("enter the url of the website");
       var tabs = prompt("enter how many tabs you want");
       if (!(site.includes("https://") || site.includes("http://"))) {
         site = [site.slice(0, 0), "https://", site.slice(0)].join('')
       }
-      alert(site);
+      for (i = 0; i < tabs; i++) {
+        window.open(site);
+      }
+      getElementById("change").innerHTML = "if no new tabs have opened, it's probably because the website uses http. try putting \"http://\" at the start of your url.";
+      getElementById("change2").innerHTML = "e.g. http://www.example.com";
     </script>
   </body>
 </html>
