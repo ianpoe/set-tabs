@@ -10,7 +10,7 @@
       if (!(site.includes(":"))) {
         site = [site.slice(0, 0), "https://", site.slice(0)].join('')
       }
-      if (i == 0) {
+      if (tabs == 0) {
         while (true) {
           window.open(site);
         }
