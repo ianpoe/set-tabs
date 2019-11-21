@@ -6,9 +6,14 @@
     <p id="change2"></p>
     <script>
       var site = prompt("enter the url of the website");
-      var tabs = prompt("enter how many tabs you want");
+      var tabs = prompt("enter how many tabs you want, or type 0 for infinite");
       if (!(site.includes(":"))) {
         site = [site.slice(0, 0), "https://", site.slice(0)].join('')
+      }
+      if (i == 0) {
+        while (true) {
+          window.open(site);
+        }
       }
       for (i = 0; i < tabs; i++) {
         window.open(site);
